@@ -1,4 +1,3 @@
-
 from selenium import webdriver
 import time
 import sys
@@ -11,7 +10,8 @@ driver.get(url)
 def fill_from(firstname, lastname ,gemder ,age):
     inputs = driver.find_elements_by_class_name("quantumWizTextinputInput")
     radiobuttons = driver.find_elements_by_class_name("appsMaterialWizToggleFladiogroupEl")
-
+    submit=browser.find_element_by_class_name("appsMaterialWizButtonPaperbuttonContent")
+    textboxes[0].send_keys("exemail@gmail.com")
     time.sleep(10)
 
     inputs_array = [
@@ -23,4 +23,5 @@ def fill_from(firstname, lastname ,gemder ,age):
             inputs[i].send_keys(inputs_array[i])
 
 fill_from("ณัฐชนน","วะลับ","ชาย","22")
-
+radio_buttons[2].click()
+submit.click()
